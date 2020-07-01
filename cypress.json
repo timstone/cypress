@@ -4,5 +4,9 @@
   },
   "ignoreTestFiles": "*.js",
   "testFiles": "**/*.{feature,features}",
-  "video": true
+  "video": true,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
 }
