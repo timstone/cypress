@@ -22,7 +22,6 @@
     "file:copy": "node scripts/file-copy.js",
     "file:cleanup": "node scripts/file-cleanup.js",
     "pretest": "npm run file:cleanup",
-    "pretest:chrome": "npm run file:cleanup",
     "runtest": "cypress run --spec \"**/*.feature\"",
     "run:all": "cypress run --spec \"**/*.features\"",
     "test": "npm-run-all --serial runtest report:copyScreenshots report:copyVideos report:merge report:generate --continue-on-error",
