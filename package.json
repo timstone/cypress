@@ -19,16 +19,15 @@
   },
   "scripts": {
     "cypress:open": "cypress open",
-    "pretest": "npm run report:cleanup",
-    "run": "cypress run --spec \"**/*.feature\"",
+    "pretest": "node scripts/cypress.js",
+    "runtest": "cypress run --spec \"**/*.feature\"",
     "run:all": "cypress run --spec \"**/*.features\"",
-    "test": "npm-run-all --serial run:all report:merge report:copyScreenshots report:generate --continue-on-error",
+    "test": "npm-run-all --serial runtest report:merge report:copyScreenshots report:copyVideos report:generate --continue-on-error",
     "test:chrome": "cypress run --spec \"**/*.feature\" --browser chrome",
     "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
     "report:copyScreenshots": "xcopy /s /i /e \".\\cypress\\screenshots\" \"public\\screenshots\"",
     "report:copyVideos": "xcopy /s /i /e \".\\cypress\\videos\" \"public\\videos\"",
-    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html",
-    "report:cleanup": "del /q /s cypress\\results\\json\\* public\\*"
+    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "keywords": [],
   "author": "Tim Stone",

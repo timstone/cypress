@@ -4,5 +4,6 @@
 /public/screenshots/*
 /public/videos/*
 /public/assets
+/public/debug.log
 index.json
 cypress/results/
