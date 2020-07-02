@@ -19,7 +19,9 @@
   },
   "scripts": {
     "cypress:open": "cypress open",
-    "pretest": "node scripts/cypress.js",
+    "file:copy": "node scripts/file-copy.js",
+    "pretest": "node scripts/file-cleanup.js",
+    "pretest:chrome": "npm-run-all --serial file:cleanup file:copy",
     "runtest": "cypress run --spec \"**/*.feature\"",
     "run:all": "cypress run --spec \"**/*.features\"",
     "test": "npm-run-all --serial runtest report:merge report:copyScreenshots report:copyVideos report:generate --continue-on-error",
