@@ -3,5 +3,6 @@
 /cypress/videos/*
 /public/screenshots/*
 /public/videos/*
+/public/assets
 index.json
 cypress/results/
