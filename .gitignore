@@ -7,3 +7,4 @@
 /public/debug.log
 index.json
 cypress/results/
+public/index.html
