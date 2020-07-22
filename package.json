@@ -5,8 +5,8 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "cypress": "~4.9.0",
-    "cypress-cucumber-preprocessor": "~2.5.1",
+    "cypress": "~4.11.0",
+    "cypress-cucumber-preprocessor": "~2.5.4",
     "cypress-multi-reporters": "~1.4.0",
     "mocha": "~8.0.1",
     "mochawesome": "~6.1.1",
